@@ -32,6 +32,17 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <div id="navbar_top" class=" remain-sticky">
+      <nav class="d-flex justify-content-between shadow-sm remain-sticky mb-1">
+        <div class="logo">ANGEL</div>
+        <ul>
+          <li class="active"><a href="/"> Home </a></li>
+          <li><a href="/about.html"> About </a></li>
+          <li><a href="/work.html"> Work </a></li>
+          <li><a href="/contact.html"> Contact </a></li>
+        </ul>
+      </nav>
+    </div>
     <div>
       <div class="hero">
         <h2>👋 Hello I am</h2>
@@ -101,5 +112,23 @@
         <i class="fab fa-linkedin"></i>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            document.getElementById("navbar_top").classList.add("fixed-top");
+            // add padding top to show content behind navbar
+            navbar_height =
+              document.querySelector(".remain-sticky").offsetHeight;
+            document.body.style.paddingTop = navbar_height + "px";
+          } else {
+            document.getElementById("navbar_top").classList.remove("fixed-top");
+            // remove padding top from body
+            document.body.style.paddingTop = "0";
+          }
+        });
+      });
+      // DOMContentLoaded  end
+    </script>
   </body>
 </html>
