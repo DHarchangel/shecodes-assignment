@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primary: #f9f7fe;
+  --primary: #efeef1;
   --secondary: #6c63ff;
   --default-font: "Poppins", sans-serif;
   --primary-font: "Playfair Display", serif;
@@ -68,10 +68,12 @@ p {
   border-radius: 4px;
   transition: all 0.5s;
 }
-.contact-btn:hover {
+.contact-btn:hover,
+.contact-me:hover {
   color: var(--secondary);
   border: 2px solid #6c63ff;
   background: var(--primary);
+  transform: none !important;
 }
 .btn-outline:hover {
   background: var(--secondary);
@@ -149,6 +151,48 @@ nav li.active a,
 nav a:hover {
   color: var(--secondary);
 }
+footer{
+  margin: 60px 0;
+}
+footer .email-link{
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+footer .email-link:hover{
+  color: var(--secondary);
+
+}
+footer .icons{
+  margin-bottom: 50px;
+}
+footer .icons a{
+  margin:  20px;
+  color: var(--secondary);
+  font-size: 20px;
+  padding: 10px 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+footer .icons a:hover{
+color: var(--primary);
+background: var(--secondary);
+}
+.contact-me{
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
+footer .contact-box{
+  background: var(--primary);
+  padding: 30px;
+}
+ 
+
 @media (max-width: 1000px) {
   h1 {
     font-size: 44px;
