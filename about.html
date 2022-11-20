@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <meta name="description" content="About Front-end developer" />
+    <meta name="description" content="about best Front-end developer" />
+    <title>About Angel</title>
   </head>
   <script
       src="https://kit.fontawesome.com/35e8646a7d.js"
@@ -27,6 +29,17 @@
     ></script>
     <link rel="stylesheet" href="/style.css" />
   <body>
+    <div id="navbar_top" class="remain-sticky">
+      <nav class="d-flex justify-content-between shadow-sm remain-sticky mb-1">
+        <div class="logo">ANGEL</div>
+        <ul>
+          <li><a title="Homepage" href="/"> Home </a></li>
+          <li class="active"><a title="About Angel" href="/about.html"> About </a></li>
+          <li><a title="Angel's work" href="/work.html"> Work </a></li>
+          <li><a title="Contact Angel" href="/contact.html"> Contact </a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="content-container container-fluid">
       <div class="row justify-content-between ">
         <div class="content col-6">
@@ -42,6 +55,54 @@
           <img src="/images/adaeze.jpg" alt="" class="img-fluid rounded img" />
         </div>
       </div>
+      <footer class="footnote container">
+
+        <div class="contact-box d-flex justify-content-between">
+          <div>
+            <h4>Work Inquiry</h4>
+          <p class="text-muted">Let's work together</p>
+          </div>
+          <div><a href="/contact.html" class="btn footer-btn">Contact Me</a>
+          </div>
+        </div>
+        <div class="items">
+        <a href="mailto:dhackangel@gmail.com" class="email-link"
+          >dhackangel@gmail.com</a
+        >
+        <div class="mt-5 icons text-center mb-5">
+          <a title="Github Profile" href="https://www.github.com/DHarchangel" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://wa.me/2348037612527" target="_blank"
+            title="whatsapp"><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook"></i></a>
+        </div>
+        </div>
+        <p class="text-center mt-5">This project was coded by Angel, and it is an <a href="https://github.com/DHarchangel/shecodes-assignment" target="_blank">Open-sourced</a></p>
+      </footer>
     </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            document.getElementById("navbar_top").classList.add("fixed-top");
+            // add padding top to show content behind navbar
+            navbar_height =
+              document.querySelector(".remain-sticky").offsetHeight;
+            document.body.style.paddingTop = navbar_height + "px";
+          } else {
+            document.getElementById("navbar_top").classList.remove("fixed-top");
+            // remove padding top from body
+            document.body.style.paddingTop = "0";
+          }
+        });
+      });
+      // DOMContentLoaded  end
+    </script>
   </body>
 </html>
